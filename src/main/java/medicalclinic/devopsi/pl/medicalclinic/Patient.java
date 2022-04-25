@@ -5,16 +5,16 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
 @AllArgsConstructor
 public class Patient {
 
-    @NotNull
+    @NotBlank
     public String name;
-    @NotNull
+    @NotBlank
     public String lastName;
     @Length(min = 11, max = 11)
     public String pesel;
